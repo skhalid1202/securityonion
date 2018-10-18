@@ -1,0 +1,2 @@
+class Replication < ApplicationRecord
+end

@@ -1,0 +1,14 @@
+<% if @events.blank? %>
+<p> There are not any events currently in the system. </p>
+<% else %>
+<p> These are the current events in our system </p>
+
+<ul id = "record">
+  <% @events.each do |c| %>
+  <li><%= link_to c.timestamp, {:action => 'show', :id => c.sid} -%></li>
+  <% end %>
+
+</ul>
+
+<% end %>
+<p><%= link_to "Add new event", {:action => 'new' }%></p>
